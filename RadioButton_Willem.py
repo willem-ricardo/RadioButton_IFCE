@@ -13,6 +13,10 @@ imgCachorro = tk.PhotoImage(file="Dog.git")
 imgPorco = tk.PhotoImage(file="Rabbit.git")
 imgCoelho = tk.PhotoImage(file="Rabbit.git")
 
+### Comando para trocar image
+def mudar_figura():
+    if rbtSelect.get == 1:
+        
 
 ### Estrutura do radio button
 rbtBird = ttk.Radiobutton(win, text='Papagaio', width=9, value=1, variable=rbtSelect, command=mudar_figura)
@@ -25,3 +29,9 @@ rbtPig = ttk.Radiobutton(win, text='Porco', width=9, value=4, variable=rbtSelect
 rbtPig.grid(columm=0, row=3, padx=5)
 rbtRabit = ttk.Radiobutton(win, text='Coelho', width=9, value=5, variable=rbtSelect, command=mudar_figura)
 rbtRabbit.grid(columm=0, row=4, padx=5)
+
+
+### Criando o canvas onde as imagens serão apresentadas
+tela = tk.Canvas(win, width=129, height=129, bg="blue")
+tela.create_image(66, 66, imgPapagaio)
+tela.grid(column=1, row=0, rowspan=5)
