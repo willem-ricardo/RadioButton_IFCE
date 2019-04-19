@@ -10,22 +10,22 @@ rbtSelect.set(1)
 imgPapagaio = tk.PhotoImage(file="Bird.gif")
 imgGato = tk.PhotoImage(file="Cat.gif")
 imgCachorro = tk.PhotoImage(file="Dog.gif")
-imgPorco = tk.PhotoImage(file="Rabbit.gif")
+imgPorco = tk.PhotoImage(file="Pig.gif")
 imgCoelho = tk.PhotoImage(file="Rabbit.gif")
 
 
 ### Comando para trocar image
 def mudar_figura():
     if rbtSelect.get() == 1:
-        tela.create_image(66, 66, image=imgPapagaio)
+        tela.create_image(88, 88, image=imgPapagaio)
     elif rbtSelect.get() == 2:
-        tela.create_image(66, 66, image=imgGato)
+        tela.create_image(88, 88, image=imgGato)
     elif rbtSelect.get() == 3:
-        tela.create_image(66, 66, image=imgCachorro)
+        tela.create_image(88, 88, image=imgCachorro)
     elif rbtSelect.get() == 4:
-        tela.create_image(66, 66, image=imgPorco)
+        tela.create_image(88, 88, image=imgPorco)
     elif rbtSelect.get() == 5:
-        tela.create_image(66, 66, image=imgCoelho)
+        tela.create_image(88, 88, image=imgCoelho)
 
 
 ### Estrutura do radio button
@@ -42,8 +42,8 @@ rbtRabbit.grid(column=0, row=4)
 
 
 ### Criando o canvas onde as imagens serão apresentadas
-tela = tk.Canvas(win, width=129, height=129, bg="blue")
-tela.create_image(66, 66, image=imgPapagaio)
+tela = tk.Canvas(win, width=170, height=170)
+tela.create_image(88, 88, image=imgPapagaio)
 tela.grid(column=1, row=0, rowspan=5)
 
 win.resizable(0,0)
